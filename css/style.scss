@@ -1,0 +1,101 @@
+@mixin transition($type,$duration,$linear){
+	-webkit-transition: $type $duration $linear; 
+  	-moz-transition: $type $duration $linear; 
+  	-ms-transition: $type $duration $linear; 
+  	-o-transition: $type $duration $linear; 
+  	transition: $type0 $duration $linear; 
+}
+html, body{
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+.clearfix{
+	clear: both;
+}
+.clearfix:before,.clearfix:after,.row:before,.row:after{
+	content: "";
+	display: table;
+}
+a{
+	color: #000000;
+	text-decoration: none;
+
+	&:hover{
+		color:#000000;
+		text-decoration: none;
+	}
+	&selected{
+		text-decoration: none;
+	}
+}
+/**,*:before,*:after,input:before,input:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*/
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+ul{
+	width:360px;
+	list-style:none;
+	padding:0;
+	margin: 0 auto;
+	
+	.dropdown{
+		.dropdown-btn{
+			display: block;
+			background-color: #409ad5;
+			box-shadow: 0 1px 0 #409ad5 inset, 0 -1px 0 #20638f inset;
+    		color:#fff;
+    		padding: 10px;
+		}
+
+
+		.dropdown-menu{
+			overflow: hidden;
+			list-style: none;
+			padding:0;
+			margin: 0;
+			position: relative;
+			max-height: 0;
+			-webkit-transition: max-height 0.5s ease; 
+  			-moz-transition: max-height 0.5s ease; 
+  			-ms-transition: max-height 0.5s ease; 
+  			-o-transition: max-height 0.5s ease; 
+  			transition: max-height 0.5s ease;  
+			&.open{
+				height: auto;
+				max-height: 999px;
+				display: block;
+				// -webkit-transition: max-height 0.5s ease; 
+  		// 		-moz-transition: max-height 0.5s ease; 
+  		// 		-ms-transition: max-height 0.5s ease; 
+  		// 		-o-transition: max-height 0.5s ease; 
+  		// 		transition: max-height 0.5s ease; 
+			
+			}	
+			li{
+				background-color:rgba(40,40,40,0.7);
+				a{
+					color:#fff;
+				}
+			}
+		}
+
+	}
+}
